@@ -10,6 +10,7 @@ services:
     command: -config.file=/etc/promtail/config.yaml
     volumes:
       - ./promtail:/etc/promtail
+      - /var/log:/var/log
     networks:
       - loki
   loki:
